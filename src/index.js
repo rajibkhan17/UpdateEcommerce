@@ -5,14 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import "antd/dist/antd.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-  <React.StrictMode>
+  //<React.StrictMode>
     <BrowserRouter>
     <App/>
-    </BrowserRouter>
+    </BrowserRouter>,
     
-  </React.StrictMode>,
+  //</React.StrictMode>,
   document.getElementById('root')
 );
 
