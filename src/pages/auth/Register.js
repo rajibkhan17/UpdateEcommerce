@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { auth } from '../../firebase';
+import { Button } from 'antd';
+import { MailOutlined } from '@ant-design/icons';
 
 
 const Register = () => {
@@ -37,7 +39,18 @@ const Register = () => {
         onChange={e => setEmail(e.target.value)} 
         placeholder="Enter your email"
         autoFocus />
-        <button type="submit" className="btn btn-info mt-3">Register</button>
+        <br />
+        <Button onClick={handleSubmit} 
+          type="primary"
+          className="mb-4"
+          block
+          shape="round"
+          icon={<MailOutlined />}
+          size="large"
+          disabled={!email}
+        >
+        Register your Email
+        </Button>
     </form>)
     
     return (
